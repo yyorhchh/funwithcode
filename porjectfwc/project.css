@@ -1,0 +1,118 @@
+#leftcert{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#logo{
+animation: shiny 2s infinite;
+}
+#contactinfo{
+align-items: center;
+text-align: center;
+}
+#tel{
+max-width: 30px;
+max-height: 30px;
+
+}
+#ig{
+max-width: 30px;
+max-height: 30px;
+
+}
+a{
+text-decoration: none;
+}
+#facebook{
+max-width: 50px;
+max-height: 50px;
+
+}
+a:visited { 
+text-decoration: none; 
+color: orange; 
+}
+.navbar{
+text-decoration: none;
+}
+#contactinfo{
+padding-top: 75px;
+height: 300px;
+width: 500px;
+background-color: green;
+border-radius: 10px;
+margin-bottom: 100px;
+}
+p{
+font-weight: 400;  
+font-style: italic;
+color: purple;
+text-align: left;
+}
+.name{
+margin-top: 20px !important;
+}
+.header{
+position: fixed; 
+top: 0;
+left: 0;
+margin-right: 20px;
+width: 100%;
+padding: 1.3rem 10%;
+color: white;
+background: rgba(0, 0, 0, .1);
+backdrop-filter: blur(50px);
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-decoration: none;
+}
+.logo{
+font-weight: 600;
+}
+.kanit-thin {
+font-family: "Kanit", sans-serif;
+font-weight: 100;
+font-style: normal;
+}
+@keyframes shiny {
+0% {  opacity: 0%; border-radius: 10%;color: red;}
+25% {  opacity: 50%;border-radius: 10%; color: red;}
+50% {   opacity: 100%;border-radius: 10%;color: red;}
+75% {  opacity: 50%;border-radius: 10%;color: red; }
+100%{  opacity: 0%;border-radius: 10%;color: red;}
+}
+@keyframes fade {
+0%,100% { opacity: 0 }
+50% { opacity: 1 }
+}
+
+@keyframes rgb {
+0% { color: red; }
+25% { color: yellow; }
+50% { color: green; }
+75% { color: cyan; }
+100%{color: blue;}
+}
+@keyframes rgbbg {
+0% { background-color: red; }
+25% { background-color: yellow; }
+50% { background-color: green; }
+75% { background-color: cyan; }
+100%{background-color: blue;}
+}
+body{
+background-color: bisque;
+font-family: "Kanit", sans-serif;
+}
+.portfolio{
+font-size:110;
+margin-top:100px;
+text-align: center;
+}
+.imagg{
+width: 500px;
+height: 500px;
+border: 5px solid black;
+border-radius: 20px;
+background-color: blue;
+}

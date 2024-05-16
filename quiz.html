@@ -1,0 +1,210 @@
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"></link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Mitr:wght@200&family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        #quizz{
+            animation: shiny 2s infinite;
+        }
+    </style>
+    <header class="header">
+        <a id="logo" href="index.html">65070114</a>
+        <nav id="navbar">
+            <a href="frontend.html">FRONTEND DEV.</a> |
+            <a href="backend.html">BACKEND DEV.</a> |
+            <a href="html.html">HTML</a> |
+            <a href="css.html">CSS</a> |
+            <a href="js.html">JAVASCRIPT</a> |
+            <a href="fw.html">FRAMEWORK</a> |
+            <a href="db.html">DATABASE</a> |
+            <a href="webhost.html">WEBHOSTING</a> |
+            <a id="quizz" href="quiz.html">QUIZ</a> |
+            <a href="refer.html">refer</a>
+        </nav>
+    </header>
+    <div id="headdiv5">
+        <div id="seconddiv">
+            <h1 id="mainword8"><b>QUIZ</b></h1>
+        </div>
+    </div>
+    <div id="outerpara1">
+        <div id="innerp1">
+        <h2>แบบทดสอบเล็กๆ เอาไว้ทบทวนสำหรับฝึกเขียน HTML CSS JS</h2>
+        <p>ตอบได้แล้วข้อต่อไปจะโผล่มาให้ทำเรื่อยๆ</p>
+        <hr>
+        <div id="question"><p id="q1q">อยากให้แสดงผลคำว่า IT KMITL ต้องพิมยังไงในHTML</p>
+        <input id="q1" type="text" width="175px">
+        <button onclick="check1()">Answer</button></div>
+        <script>
+            function check1(){
+                let ans1 = document.getElementById("q1").value;
+                if(ans1=="<p>IT KMITL</p>"){
+                    let q1 = document.getElementById("q1q");
+                    let box = document.getElementById("question");
+                    let qq2 = document.createElement("p");
+                    let bt2 = document.createElement("button");
+                    let ip2 = document.createElement("input");
+                    ip2.style.width = "175px";
+                    bt2.innerHTML = "Answer"
+                    ip2.id = "q2"
+                    qq2.id="q2q"
+                    bt2.onclick = check2;
+                    q1.style.color = "white";
+                    qq2.innerHTML ="อยากได้กล่องข้อความที่รับค่าtextต้องใช้tagอะไร พิมมาทั้งTagเปิดและปิดแต่ไม่ต้องพิมข้อความกลางTag"
+                    box.appendChild(qq2);
+                    box.appendChild(ip2);
+                    bt2.style.margin = "10px";
+                    box.appendChild(bt2);
+                    q1.style.animation = "none";
+                }
+                else{
+                    let q1 = document.getElementById("q1q");
+                    q1.style.color = "red";
+                    q1.style.animation = "fade 1s infinite";
+                }
+            }
+            function check2(){
+                let ans2 = document.getElementById("q2").value;
+                if(ans2=='<input type="text"></input>'){
+                    let q2 = document.getElementById("q2q");
+                    let box = document.getElementById("question");
+                    let qq3 = document.createElement("p");
+                    let ansp1 = document.createElement("p");
+                    let ansp3 = document.createElement("p");
+                    let bt3 = document.createElement("button");
+                    let ip3 = document.createElement("input");
+                    ip3.style.width = "175px";
+                    ansp1.innerHTML=".BG{"
+                    ansp3.innerHTML="}"
+                    bt3.innerHTML = "Answer"
+                    ip3.id = "q3"
+                    q2.style.color = "white";
+                    qq3.id="q3q";
+                    qq3.innerHTML ="ในcssถ้าต้องการเปลี่ยนBackground เป็นสีดำปกติ ของคลาส BG ต้องใช้คำสั่งอะไร"
+                    box.appendChild(qq3);
+                    box.appendChild(ansp1);
+                    box.appendChild(ip3);
+                    box.appendChild(ansp3);
+                    bt3.onclick = check3;
+                    bt3.style.margin = "10px";
+                    box.appendChild(bt3);
+                    q2.style.animation = "none";
+                }
+                else{
+                    let q2 = document.getElementById("q2q");
+                    q2.style.color = "red";
+                    q2.style.animation = "fade 1s infinite";
+                }
+            }
+            function check3() {
+    let ans3 = document.getElementById("q3").value;
+    if (ans3 === 'background-color:red;') {
+        let q3 = document.getElementById("q3q");
+        let box = document.getElementById("question");
+        let qq4 = document.createElement("p");
+        let div4 = document.createElement("div");
+        div4.id = "block";
+        div4.style.backgroundColor = "black";
+        let indiv1 = document.createElement("p");
+        let indiv2 = document.createElement("p");
+        indiv1.innerHTML = '&ltp id="name"&gtpopo&lt/p&gt';
+        indiv2.innerHTML = '&ltp id="surname"&gtpopo&lt/p&gt';
+        indiv1.style.color = "white";
+        indiv2.style.color = "white";
+        let bt4 = document.createElement("button");
+        let ip4 = document.createElement("input");
+        ip4.style.width = "175px";
+        bt4.innerHTML = "Answer";
+        ip4.id = "q4Input"; 
+        qq4.id = "q4q";
+        qq4.innerHTML = "ถ้าจะเปลี่ยนค่าในไฟล์ CSS ของชื่อตัวเองต้องเลือก selector ตัวไหน";
+        div4.appendChild(indiv1);
+        div4.appendChild(indiv2);
+        box.appendChild(div4);
+        box.appendChild(qq4);
+        box.appendChild(ip4);
+        bt4.style.margin = "10px"; 
+        box.appendChild(bt4);
+        bt4.onclick = check4;
+        q3.style.animation = "none";
+    } else {
+        let q3 = document.getElementById("q3q");
+        q3.style.color = "red";
+        q3.style.animation = "fade 1s infinite"; 
+    }
+}
+
+function check4() {
+    let ans4 = document.getElementById("q4Input").value; 
+    if (ans4 === '#name') {
+        let q4 = document.getElementById("q4q");
+        let box = document.getElementById("question");
+        let qq5 = document.createElement("p"); 
+        let div5 = document.createElement("div");
+        div5.id = "block";
+        div5.style.backgroundColor = "black";
+        let indiv5 = document.createElement("p");
+        let indiv6 = document.createElement("p");
+        indiv5.innerHTML = '&ltinput id="name"&gtpopo&lt/input&gt'; 
+        indiv6.innerHTML = '&ltinput id="surname"&gtpopo&lt/input&gt'; 
+        indiv5.style.color = "white";
+        indiv6.style.color = "white";
+        let bt5 = document.createElement("button");
+        let ip5 = document.createElement("input");
+        ip5.style.width = "175px";
+        bt5.innerHTML = "Answer";
+        ip5.id = "q5"; 
+        q4.style.color = "white"; 
+        qq5.id = "q5q"; 
+        qq5.innerHTML = "จะเอาค่า input จากนามสกุลเราต้องเขียนแบบไหนใน JS";
+        div5.appendChild(indiv5);
+        div5.appendChild(indiv6);
+        box.appendChild(div5);
+        box.appendChild(qq5);
+        box.appendChild(ip5);
+        bt5.style.margin = "10px"; 
+        box.appendChild(bt5);
+        bt5.onclick = check5;
+        q4.style.animation = "none"; 
+    } else {
+        let q4 = document.getElementById("q4q");
+        q4.style.color = "red";
+        q4.style.animation = "fade 1s infinite"; 
+    }
+}
+function check5(){
+    let ans5 = document.getElementById("q5").value;
+    if (ans5 === 'document.getElementByID("surname")') {
+        let q5 = document.getElementById("q5q");
+        q5.style.color = "white"; 
+        q5.style.animation = "none"; 
+        let congrat = document.createElement("p");
+        congrat.innerHTML = "เก่งมากคุณทำได้ทุกข้อเลย"
+        congrat.style.animation = "rgb 2s infinite";
+        let box = document.getElementById("question");
+        congrat.style.textAlign = "center";
+        box.appendChild(congrat);
+    }
+    else {
+        let q5 = document.getElementById("q5q");
+        q5.style.color = "red";
+        q5.style.animation = "fade 1s infinite"; 
+    }
+}
+        </script>
+    </div>
+</body>
+</html>
